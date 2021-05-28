@@ -1,0 +1,15 @@
+{
+    "name": "asus/metronics",
+    "authors": [
+        {
+            "name": "prajwal.poudel",
+            "email": "prajwal.poudel@ebpearls.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Prajwal\\Metronics\\": "src/"
+        }
+    }
+}
