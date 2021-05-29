@@ -1,6 +1,6 @@
 <?php
 
-Route::get('metronics', function () {
+Route::get('metronic', function () {
     $menus = [];
     return view('metronics::index', compact('menus'));
 });
