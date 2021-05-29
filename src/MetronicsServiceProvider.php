@@ -10,6 +10,7 @@ class MetronicsServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ .'/routes/web.php');
         $this->loadViewsFrom(__DIR__ .'/resources/views', 'metronics');
+        $this->loadMigrationsFrom(__DIR__ .'/database/migrations');
 
         $this->publishes([
             __DIR__.'/public/assets' => public_path('vendor/metronics'),
@@ -17,7 +18,15 @@ class MetronicsServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/resources/views' => resource_path('views/vendor/metronics'),
-        ]);
+        ], 'views');
+
+        $this->publishes([
+            __DIR__.'/database/migrations' => database_path('migrations/metronics'),
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/Entities' => app_path('Entities'),
+        ], 'migrations');
 
     }
 
