@@ -13,15 +13,15 @@ class MetronicsServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ .'/database/migrations');
 
         $this->publishes([
-            __DIR__.'/public/assets' => public_path('vendor/metronics'),
+            __DIR__.'/public/assets' => public_path('metronics'),
         ], 'public');
 
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/metronics'),
+            __DIR__.'/resources/views' => resource_path('views/metronics'),
         ], 'views');
 
         $this->publishes([
-            __DIR__.'/database/migrations' => database_path('migrations/metronics'),
+            __DIR__.'/database/migrations' => database_path('migrations'),
         ], 'migrations');
 
         $this->publishes([
