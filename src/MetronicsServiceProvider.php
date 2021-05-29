@@ -26,7 +26,7 @@ class MetronicsServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/Entities' => app_path('Entities'),
-        ], 'migrations');
+        ], 'models');
 
     }
 
